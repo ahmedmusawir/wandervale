@@ -13,6 +13,22 @@
  */
 
 get_header(); ?>
+<?php 
+/**
+ *
+ * Advanced Custom Fields Variables
+ *
+ */
+$contact_page_title = get_field( 'contact_page_title' );
+$contact_page_sub_title = get_field( 'contact_page_sub_title' );
+$left_pane_title_1 = get_field( 'left_pane_title_1' );
+$left_pane_title_2 = get_field( 'left_pane_title_2' );
+$left_pane_content_1 = get_field( 'left_pane_content_1' );
+$left_pane_content_2 = get_field( 'left_pane_content_2' );
+$form_shortcode = get_field( 'form_shortcode' );
+
+
+?>
 
 <div class="content-wrap"> 
 
@@ -35,35 +51,31 @@ get_header(); ?>
 
 		<section class="header-txt">
 		  <div class="pg-header-txt container">
-		  	<h2>Get in touch with us</h2>
-		  	<h4><em>Don't be shy ...</em></h4>
+		  	<h2><?php echo $contact_page_title; ?></h2>
+		  	<h4><em><?php echo $contact_page_sub_title; ?></em></h4>
 		  </div>
 		</section>
 
 		<section class="col-content col-md-6">
 
 		  <div class="contact-header-txt">
-		  	<h3>Our Office</h3>
+		  	<h3><?php echo $left_pane_title_1; ?></h3>
 		  </div>
 		
 			<div class="address-text">
-				<p>198  West 21th Street, Suite 721</p>
-				<p>New York, NY 10010</p>
-				<p><i class="fa fa-envelope"></i> Email: youremail@yourdomain.com</p>
-				<p><i class="fa fa-phone-square"></i> Phone: +88 (0) 101 0000 000</p>
-				<p><i class="fa fa-fax"></i> Fax: +88 (0) 202 0000 001</p>
+
+			<?php echo $left_pane_content_1; ?>
+				
 			</div>
 
 		  <div class="contact-header-txt">
-              <h3>Let's Socialize</h3>
+              <h3><?php echo $left_pane_title_2; ?></h3>
 		  </div>
 
 			<div class="contact-social">
-				<span><a href="#"><i class="fa fa-twitter fa-3x"></i></a></span>				
-				<span><a href="#"><i class="fa fa-facebook fa-3x"></i></a></span>				
-				<span><a href="#"><i class="fa fa-google-plus fa-3x"></i></a></span>				
-				<span><a href="#"><i class="fa fa-instagram fa-3x"></i></a></span>				
-				<span><a href="#"><i class="fa fa-pinterest fa-3x"></i></a></span>				
+			
+			<?php echo $left_pane_content_2; ?>
+							
 			</div>
 
 			
@@ -73,31 +85,12 @@ get_header(); ?>
 
 		 <div class="contact-header-txt">
 		  	<h3>Contact Us</h3>
-		  </div>
+		 </div>
 
-			      
-			<form class="contact-form">
-			  <div class="form-group">
-			    <label for="exampleInputEmail1">Email address</label>
-			    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-			  </div>
-			  <div class="form-group">
-			    <label for="exampleInputPassword1">Password</label>
-			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-			  </div>
-			  <div class="form-group">
-			    <label for="exampleInputFile">File input</label>
-			    <input type="file" id="exampleInputFile">
-			    <p class="help-block">Example block-level help text here.</p>
-			  </div>
-			  <div class="checkbox">
-			    <label>
-			      <input type="checkbox"> Check me out
-			    </label>
-			  </div>
-			  <button type="submit" class="btn btn-default">Submit</button>
-			</form>
+			    
 
+			   <?php echo do_shortcode( $form_shortcode ); ?>   
+			
 		</section>
 
     </div>

@@ -8038,6 +8038,8 @@ body {
   font-family: 'Raleway', sans-serif;
   position: relative;
   z-index: -100;
+  display: none;
+  color: red;
 }
 
 img {
@@ -8283,6 +8285,15 @@ h1, h2, h3, h4, h5 {
 .contact-content .container .col-form {
   background-color: #f0f0f0;
   padding: 3rem;
+}
+
+.contact-content .container .col-form .wpcf7-submit {
+  background-color: #555555;
+  border: 1px solid black;
+}
+
+.contact-content .container .col-form .wpcf7-submit:hover {
+  background-color: #990000;
 }
 
 .contact-content .container .col-content {

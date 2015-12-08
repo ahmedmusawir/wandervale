@@ -11,6 +11,8 @@ body {
 	// background: red;
 	position:relative;
 	z-index: -100;
+	display: none;
+	color: red;
 }
 
 img {
@@ -25,8 +27,7 @@ h1, h2, h3, h4, h5 {
 .content-wrap {
 	position: relative;
 	z-index: 1;
-	// padding-bottom: 3rem;
-	// border: 1px solid red;
+	
 }
 
 
@@ -304,6 +305,15 @@ h1, h2, h3, h4, h5 {
 		.col-form {
 			background-color: lighten( #e3e3e3, 5%);
 			padding: 3rem;
+
+			.wpcf7-submit {
+				background-color: $charcoal;
+				border: 1px solid black;
+
+				&:hover {
+					background-color: darken( red, 20% );
+				}
+			}
 		}
 
 		.col-content {
