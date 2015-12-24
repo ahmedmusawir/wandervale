@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div class="content-wrap">
 
-	<section id="primary" class="pg-content">
+	<section id="primary" class="pg-content pg-search">
 		<main id="main" class="container" role="main">
 
 		<?php

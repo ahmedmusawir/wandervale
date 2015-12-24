@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
+ * Template Name: E-Application 
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -50,17 +50,32 @@ $page_sub_title = get_field( 'page_sub_title');
 	  </header><!-- /header -->
 
 	  <div class="container">
-    	
-		<div class="entry-content">
-			<?php
-				the_content();
+		
+		<section class="col-content col-md-8">
 
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wandervale' ),
-					'after'  => '</div>',
-				) );
-			?>
-		</div><!-- .entry-content -->
+    	
+			<div class="entry-content">
+				<?php
+					the_content();
+
+					wp_link_pages( array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wandervale' ),
+						'after'  => '</div>',
+					) );
+				?>
+			</div><!-- .entry-content -->
+
+		</section> <!-- end Col Content -->
+
+<?php endwhile; // End of the loop. ?>
+
+		<section class="col-sidebar col-md-4">
+
+			<?php get_sidebar('eapp'); ?>
+
+		</section> <!-- end Col Sidebar -->
+
+
 
       </div> <!-- end container -->
 	
@@ -69,9 +84,30 @@ $page_sub_title = get_field( 'page_sub_title');
 
   </section>
 
-<?php endwhile; // End of the loop. ?>
 
 </div> <!-- END CONTENT WRAP. WRAPS THE WHOLE CONTENT -->	
 
 <?php
 get_footer();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

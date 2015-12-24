@@ -14,6 +14,12 @@
 
 get_header(); ?>
 
+<?php  
+$page_sub_title = get_field( 'page_sub_title');
+
+
+?>
+
 <div class="content-wrap"> 
 
 <?php	while ( have_posts() ) : the_post();  ?>
@@ -38,7 +44,7 @@ get_header(); ?>
 		  <div class="pg-header-txt container">
 		  	<!-- <h1>Full Width Page</h1> -->
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		  	<h4><em>Extream Beauty ...</em></h4>
+		  	<h4><em><?php echo $page_sub_title; ?></em></h4>
 		  </div>
 
 	  </header><!-- /header -->

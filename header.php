@@ -43,6 +43,11 @@
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
+			<?php
+			    $siteLogo_desktop = get_field('logo_desktop', 2); // 1476 is post id                               
+			    $siteLogo_mobile = get_field('logo_mobile', 2); // 1476 is post id                               
+			    $size = 'full'; // (thumbnail, medium, large, full or custom size)
+			?>
 
 <!-- 		<nav id="site-navigation" class="main-navigation" role="navigation">
 		</nav> --><!-- #site-navigation -->
@@ -58,14 +63,14 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 		        </button>
-		    <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="#">WANDERVALE</a>
+		    <a class="navbar-brand hidden-lg" href="#"><img src="<?php echo $siteLogo_mobile;  ?>" alt=""></a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse navbar-ex1-collapse">
 
-		    	<div class="logo hidden-xs">
-		        	<img src="http://wandervale/wp-content/uploads/2015/12/logo-220x250.jpg" alt="">
+		    	<div class="logo hidden-sm hidden-xs hidden-md">
+		        	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $siteLogo_desktop;  ?>" alt=""></a>
 		      	</div>
 		        <?php
 			        wp_nav_menu( array(
